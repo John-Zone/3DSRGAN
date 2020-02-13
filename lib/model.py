@@ -10,10 +10,12 @@ import scipy.io as scio
 import numpy as np
 
 #load training data
-def load_data(Flags):
+def load_data(FLAGS=None):
+    if FLAGS is None:
+        raise ValueError('No FLAGS is provided for data loader') 
     #Need to Modify the path of training data
-    data_HR = scio.loadmat(Flags.input_dir_HR)
-    data_LR = scio.loadmat(Flags.input_dir_LR)
+    data_HR = scio.loadmat(FLAGS.input_dir_HR)
+    data_LR = scio.loadmat(FLAGS.input_dir_LR)
     HR = data_HR['train']
     LR = data_LR['train_ds']
     LR = np.expand_dims(LR, axis=4)
