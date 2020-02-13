@@ -1,0 +1,1 @@
+This data is present to train the 3DSRGAN model, and this data is from the hyper-spectral data of Washington DC Mall,after cutting into certain samples we reshape the data into form of NWHC to suit the tensorflow framework to train the model, if you want to use your own dataset to train the model,please do the reprocessing job.
