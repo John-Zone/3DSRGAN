@@ -128,7 +128,7 @@ if FLAGS.mode == 'test':
 # The training mode
 elif FLAGS.mode == 'train':
 
-    inputs_batch, targets_batch = load_data(Flags)
+    inputs_batch, targets_batch = load_data(FLAGS)
 
     # Connect to the network
     if FLAGS.task == '_3DSRGAN':
